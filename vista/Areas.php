@@ -77,4 +77,28 @@
             echo '</tr>';
         }
         echo '</table>';
+    }elseif ($_REQUEST["area"]=="notificacion") {
+        $mu=new MAnimo();
+        $quer=$mu->notificacion($_REQUEST["id"]);
+        echo '<table id="tab-estado">';
+        for ($i=0;$i<mysqli_num_rows($quer);$i++){
+            $fila=  mysqli_fetch_array($quer);
+            echo '<tr>';
+            if ($fila['tipos']==0) {
+                $strin= '<img id="in" src="../img/cara 0.png" alt="">';
+            }elseif ($fila['tipos']==1) {
+                $strin= '<img id="in" src="../img/cara 1.png" alt="">';
+            }elseif ($fila['tipos']==2) {
+                $strin= '<img id="in" src="../img/cara 2.png" alt="">';
+            }elseif ($fila['tipos']==3) {
+                $strin= '<img id="in" src="../img/cara 3.png" alt="">';
+            }elseif ($fila['tipos']==4) {
+                $strin= '<img id="in" src="../img/cara 4.png" alt="">';
+            }
+            
+            echo '<td><h6 id="nombres">'.$fila["nombre"].'</h6></td>';
+            echo '<td><h6 id="nombres">'.$strin.'</h6></td>';
+            echo '<td><h6 id="nombres">'.$fila["horas"].'</h6></td>';
+        }
+        echo '</table>';
     }

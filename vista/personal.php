@@ -47,7 +47,7 @@
                         <li><a href="javascript:;" onclick="area(<?php echo $Usuario->getId();?>,'estado');return false;"class="pestañas">Estado</a></li>
                         <li><a href="javascript:;" onclick="area(<?php echo $Usuario->getId();?>,'amigos');return false;" class="pestañas">Amigos</a></li>
                         <li><a href="javascript:;" onclick="area(<?php echo $Usuario->getId();?>,'buscar');return false;" class="pestañas">+</a></li>
-                        <li><a href="javascript:;" onclick="area(<?php echo $Usuario->getId();?>,'notificacion');return false;" class="pestañas">?</a></li>
+                        <li><a href="javascript:;" onclick="area(<?php echo $Usuario->getId();?>,'notificacion');return false;" class="pestañas"><img src="../img/internet.png"></a></li>
                     </ul>
 
                     <div class="tab_container">
@@ -84,7 +84,11 @@
         }
         $(document).ready(
             tensiometro(document.getElementById("idpersona").value)
+            
         );
+        $(document).ready(
+            area(document.getElementById("idpersona").value,"aviso")    
+            );
         function tensiometro(id){
             var parametros = {
                 "id": id 

@@ -34,4 +34,17 @@ class MAnimo{
                 return false;
             }
     }
+    public function notificacion($id){
+        $cado=new cado();
+        try{
+            $cado->conectar();
+            $quer=$cado->recuperar("SELECT persona.nombres AS nombre, animo.tipo AS tipos, animo.hora AS horas "
+                    ."FROM amigo INNER JOIN persona ON amigo.idafiliado = persona.idpersona INNER JOIN animo ON ".
+                    "persona.idpersona = animo.idpersona WHERE idcuenta =".$id. " AND animo.fecha = CURDATE( ) ");
+            $cado->desconectar();
+            return $quer;
+        }  catch (Exception $e){
+            return false;
+        }
+    }
 }
