@@ -1,0 +1,273 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header.tituloPrincipal{
+    height: 60px;
+    padding: 5px 10px;
+    display: flex;
+    background-color: aquamarine;
+}
+#div-contLog{
+    width: 10%;
+}
+#div-logo, #div-usuario{
+    width: 50px;
+    height: 50px;
+}
+#div-logo img, #div-usuario img{
+    width: 100%;
+    height: 100%;
+}
+#div-contUsuario{
+    width: 90%;
+    max-height: 70px;
+    display: flex;
+    justify-content: flex-end;
+}
+#div-contUsuario p{
+    padding: 15px 20px;
+}
+
+div.div-contenido{
+    display: flex;
+}
+div.div-perfil{
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+div.div-perfil > div{
+    text-align: center;
+    justify-content: center;
+}
+div.div-navegacion{
+    width: 50%;
+    margin: 10px auto;
+}
+
+
+div.div-tenciometro{
+    width: 80%;
+}
+div.div-tenciometro img{
+    width: 100%;
+    height: 100%;
+}
+
+/*menu de navegacion*/
+.menu {
+    background:#b14aed;
+    list-style:none;
+    overflow:hidden;
+}
+
+.menu li {
+    float:left;
+}
+
+.menu li a {
+    display:block;
+    padding: 15px 20px;
+    color:#fff;
+    text-decoration:none;
+}
+
+.menu li a:hover {
+    background:#000;
+}
+/* fin menu de navegacion*/
+
+/* diseño pestañas de tabla*/
+ul.tabs {
+	height: 32px;
+	border-bottom: 1px solid #b14aed;
+	border-left: 1px solid #999;
+	width: 100%;
+}
+ul.tabs li {
+	float: left;
+    list-style: none;
+	height: 31px;
+	line-height: 31px;
+	border: 1px solid #b14aed;
+	border-left: none;
+	margin-bottom: -1px;
+	overflow: hidden;
+	background: #b14aed;
+}
+ul.tabs li a {
+	text-decoration: none;
+	color: #000;
+	display: block;
+	font-size: 1.2em;
+	padding: 0 20px;
+	border: 1px solid #fff;
+}
+ul.tabs li a:hover {
+	background: #ccc;
+}
+html ul.tabs li.active, html ul.tabs li.active a:hover  {
+	background: #fff;
+	border-bottom: 1px solid #fff; 
+}
+/* fin diseño pestañas de tabla*/
+
+
+/* diseño contenido de tabla*/
+
+.tab_container {
+	border: 1px solid #b14aed;
+	border-top: none;
+	overflow: hidden;
+	clear: both;
+	float: left; width: 100%;
+	background: #fff;
+}
+.tab_content {
+	padding: 20px;
+	font-size: 1.2em;
+}
+/* fin diseño contenido de tabla*/
+
+/*diseño tabla amigos */
+
+#tab-amigos td{
+    padding-left: 15px;
+}
+#tab-amigos td.foto{
+    width: 50px;
+    height: 45px;
+}
+
+#tab-amigos td.foto img{
+    width: 100%;
+    height: 100%;
+    border-radius: 35px;
+}
+#tab-amigos td.eliminar{
+    width: 50px;
+    height: 45px;
+}
+#tab-amigos td.eliminar img{
+    width: 30%;
+    height: 50%;
+    margin-bottom: 0px;
+}
+#tab-amigos td.betterexp{
+    width: 80px;
+    height: 45px;
+}
+#tab-amigos td.betterexp img{
+    width: 95%;
+    height: 90%;
+    margin-bottom: 0px;
+}
+/* fin diseño tabla amigos */
+
+/*diseño tabla estado */
+
+#tab-estado td.td-imgEstado{
+    width: 50px;
+    height: 45px;
+}
+#tab-estado td.td-imgEstado img{
+    width: 100%;
+    height: 100%;
+}
+td.descripcion{
+    padding-left: 20px;
+}
+
+/* fin diseño tabla estado */
+
+
+/*diseño buscar amigos */
+#tab4{
+    display: flex;
+    justify-content: center;
+}
+div#div-buscarAmigos{
+    width: 95%;
+}
+div#div-buscarAmigos > div{
+    display: flex;
+}
+
+input#input-textbusqueda{
+    width: 80%;
+    display: block;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 2px;
+    padding-left: 5px;
+}
+div#div-buscar{
+    float: right;
+    border: 1px solid #ccc;
+    border-left: none;
+    background-color: #ccc;
+    cursor: pointer;
+}
+div#resultAmigos{
+    width: 80%;
+    margin-top: 30px;
+    border: 1px solid #ccc;
+}
+
+/* fin diseño buscar amigos */
+
+footer#pie{
+    clear: both;
+    padding: 2px 15px;
+    height: 40px;
+    background-color: #5bc8af;
+}
+
+/*----------------------condicionales Resp------------------------*/
+
+/*menores de 1060*/
+@media (max-width: 1060px){
+    
+    
+}
+
+/*diseño tabletas*/
+
+@media (max-width: 768px){
+    
+    .menu li a {
+        display:block;
+        padding: 13px 10px;
+        color:#fff;
+        text-decoration:none;
+    }
+    div.div-contenido{
+        display: block;
+    }
+    div.div-perfil{
+        width: 100%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    div.div-navegacion{
+        width: 100%;
+        float: none;
+    }
+    ul.tabs li a {
+        padding: 0 10px;
+        font-size: 1em;
+    }
+}
+
+/*diseño movil*/
+
+@media (max-width: 480px){
+    
+    
+}
